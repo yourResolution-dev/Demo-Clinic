@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --color-clinic-teal: #009688;
+  --color-clinic-teal-dark: #00796b;
+  --color-clinic-teal-light: #e0f2f1;
+  --color-clinic-navy: #0f2744;
+  --color-clinic-navy-light: #1e3a5f;
+  --color-clinic-sky: #0284c7;
+  --color-clinic-sky-light: #f0f9ff;
+  --color-clinic-bg: #f8fafc;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Smooth transitions */
+.transition-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Custom subtle glows */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(15, 39, 68, 0.06), 0 2px 6px -1px rgba(15, 39, 68, 0.04);
+}
+
+.shadow-card-hover {
+  box-shadow: 0 12px 30px -4px rgba(0, 150, 136, 0.12), 0 4px 12px -2px rgba(15, 39, 68, 0.06);
+}
+
+.shadow-teal-glow {
+  box-shadow: 0 8px 25px -4px rgba(0, 150, 136, 0.35);
+}
+
+/* Modal animation */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-in {
+  animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Soft pulse animation */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 3s ease-in-out infinite;
+}
